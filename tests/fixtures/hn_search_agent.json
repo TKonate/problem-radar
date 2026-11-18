@@ -1,0 +1,84 @@
+{
+  "hits": [
+    {
+      "objectID": "46990729",
+      "title": "An AI agent published a hit piece on me",
+      "url": "https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/",
+      "author": "scottshambaugh",
+      "created_at": "2026-02-12T16:23:24Z",
+      "story_text": "Previously: <i>AI agent opens a PR write a blogpost to shames the maintainer who closes it</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46987559\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46987559</a> - Feb 2026 (582 comments)",
+      "points": 2346,
+      "num_comments": 951
+    },
+    {
+      "objectID": "48500012",
+      "title": "AI agent bankrupted their operator while trying to scan DN42",
+      "url": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/",
+      "author": "xiaoyu2006",
+      "created_at": "2026-06-12T04:42:53Z",
+      "story_text": null,
+      "points": 1467,
+      "num_comments": 536
+    },
+    {
+      "objectID": "47460525",
+      "title": "OpenCode – Open source AI coding agent",
+      "url": "https://opencode.ai/",
+      "author": "rbanffy",
+      "created_at": "2026-03-20T21:03:52Z",
+      "story_text": null,
+      "points": 1274,
+      "num_comments": 618
+    },
+    {
+      "objectID": "50452455",
+      "title": "My AI agents found an unmapped Maya site?",
+      "url": "https://pietromiotti.com/latest/maya-site",
+      "author": "eyvindn",
+      "created_at": "2026-11-11T12:05:22Z",
+      "story_text": null,
+      "points": 1036,
+      "num_comments": 393
+    },
+    {
+      "objectID": "46987559",
+      "title": "AI agent opens a PR write a blogpost to shames the maintainer who closes it",
+      "url": "https://github.com/matplotlib/matplotlib/pull/31132",
+      "author": "wrxd",
+      "created_at": "2026-02-12T11:46:01Z",
+      "story_text": null,
+      "points": 953,
+      "num_comments": 750
+    },
+    {
+      "objectID": "46515696",
+      "title": "Opus 4.5 is not the normal AI agent experience that I have had thus far",
+      "url": "https://burkeholland.github.io/posts/opus-4-5-change-everything/",
+      "author": "tbassetto",
+      "created_at": "2026-01-06T17:45:37Z",
+      "story_text": null,
+      "points": 879,
+      "num_comments": 1353
+    },
+    {
+      "objectID": "47911524",
+      "title": "An AI agent deleted our production database. The agent's confession is below",
+      "url": "https://twitter.com/lifeof_jer/status/2048103471019434248",
+      "author": "jeremyccrane",
+      "created_at": "2026-04-26T16:27:29Z",
+      "story_text": null,
+      "points": 860,
+      "num_comments": 1032
+    },
+    {
+      "objectID": "47009949",
+      "title": "An AI agent published a hit piece on me – more things have happened",
+      "url": "https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me-part-2/",
+      "author": "scottshambaugh",
+      "created_at": "2026-02-14T00:37:53Z",
+      "story_text": "<a href=\"https:&#x2F;&#x2F;infosec.exchange&#x2F;@mttaggart&#x2F;116065340523529645\" rel=\"nofollow\">https:&#x2F;&#x2F;infosec.exchange&#x2F;@mttaggart&#x2F;116065340523529645</a>",
+      "points": 768,
+      "num_comments": 624
+    }
+  ]
+}

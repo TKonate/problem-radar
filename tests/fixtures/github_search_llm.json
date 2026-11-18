@@ -1,0 +1,202 @@
+{
+  "total_count": 55912,
+  "items": [
+    {
+      "number": 5680,
+      "title": "feat(sandbox): automated image builds, in-place sandbox updates, and LLM response streaming on Azure",
+      "body": "### User Story\n\nAn NVIDIA AI lab partner uses OpenShell for running an agent application inside an OpenShell sandbox, and is validating that deployment on Azure Kubernetes Service (AKS). The partner would like OpenShell to provide automated sandbox image build/publish on Azure, a supported way to update sandbox code and dependencies without full image rebuilds, and end-to-end LLM response streaming for chat and voice workflows.\n\n### Problem Statement\n\nThree gaps were reported:\n\n1. **Sandbox image build automation on Azure** — there is no automated path to build and publish sandbox images on Azure to produce repeatable, deployable images.\n2. **Sandbox update workflow** — there is no supported workflow for updating sandbox code, configuration, and dependencies; today changes appear to require repeatedly rebuilding the sandbox image.\n3. **LLM response streaming** — end-to-end streaming of LLM responses is not available for chat and voice reception workflows.\n\nThe streaming request is a capability gap and does not correspond to a reproduced OpenShell defect.\n\n### Impact / Why This Matters\n\nThe missing build automation, update workflow, and streaming support add integration and development effort while the partner validates its product on OpenShell running on AKS. Each sandbox code or dependency change currently costs a full image rebuild cycle, and the lack of streaming constrains interactive chat and voice reception use cases.\n\n### Proposed Design\n\nNot provided in detail by the reporter. The requested capabilities are:\n\n- Automated sandbox image build and publishing on Azure, producing repeatable and directly deployable images.\n- A supported workflow to update sandbox code, configuration, and dependencies without requiring a full image rebuild for every change.\n- End-to-end LLM response streaming through OpenShell, usable by chat and voice reception workflows.\n\n### Acceptance Criteria\n\n- [ ] Sandbox images can be built and published on Azure through an automated, documented pipeline that yields repeatable, deployable images.\n- [ ] A documented, supported workflow exists for updating sandbox code, configuration, and dependencies without rebuilding the sandbox image for every change.\n- [ ] LLM responses can be streamed end to end through OpenShell and consumed by chat and voice reception workflows.\n- [ ] All three capabilities are verified for an OpenShell sandbox deployment on Azure Kubernetes Service (AKS).\n\n### Alternatives Considered\n\nNot provided.\n\n_Reported to NVIDIA by an AI lab partner._\n\n<!-- psi-ref-226a3dff8499 -->",
+      "html_url": "https://github.com/NVIDIA/OpenShell/issues/5680",
+      "created_at": "2026-11-18T00:19:14Z",
+      "repository_url": "https://api.github.com/repos/NVIDIA/OpenShell",
+      "labels": [
+        {
+          "id": 10422614317,
+          "node_id": "LA_kwDORYG5fs8AAAACbTx5LQ",
+          "url": "https://api.github.com/repos/NVIDIA/OpenShell/labels/state:triage-needed",
+          "name": "state:triage-needed",
+          "color": "D93F0B",
+          "default": false,
+          "description": "Opened without agent diagnostics and needs triage",
+          "archived_at": null,
+          "archived_by": null
+        }
+      ],
+      "user": {
+        "login": "NVIDIA-AI-Labs"
+      }
+    },
+    {
+      "number": 2860,
+      "title": "`llm()` asks for a structured answer without forcing a tool call, so newer models can be used",
+      "body": "**Why.** Owner ruling 6 of 2026-11-18 on #2836, with the model guidance in the same comment. Model ids and list prices in that guidance are the engineer's to confirm against the vendor's current table before any change; the product manager has not verified them. Step 3, and review section C: the seam depends on a forced tool call and a fixed temperature, which newer models refuse. This is first-90-days work, filed with #2846 because it is the same file. Source: the code review of 2026-11-17 (#2836), which the owner asked for on 2026-11-17. Filed on the owner's instruction of 2026-11-18 (https://github.com/tim-clifford6991/reachkit/issues/2836#issuecomment-6964720703), as the split writes it (https://github.com/tim-clifford6991/reachkit/issues/2836#issuecomment-6964606504). The owner's seven rulings: https://github.com/tim-clifford6991/reachkit/issues/2836#issuecomment-6964496573.\n\n## Conditions\n\n1. `llm()` gets its structured answer by a strict tool with automatic tool choice or by structured output; no call forces a tool.\n   - Fails → a free replay of stored responses through the new request shape.\n\n2. Every existing caller gets the same parsed answer for the same stored response.\n   - Fails → a replay of a stored pass (`npm run pass -- --replay`) with unchanged output, in the PR body.\n\n3. No model id changes in this PR.\n   - Fails → the diff.\n\n## Invariants\n- 0¢. Autopilot is unchanged. No publication row is deleted. \"Not measured\" is never 0. Nothing is tuned to reachkit.app.\n- 0¢: proven by replay; no live call.\n- Caps and the price book are untouched.\n- #2846's cut-off and refusal outcomes are kept.\n\n## Surfaces\nThe model seam. No screen.\n\n## Overlaps\n#2846 first (same file). #2861 after. B3 (#2864) changes the writer's prompt in the same seam and comes after this.\n\n## Files likely touched\n`src/lib/llm/index.ts`, `src/lib/llm/tiers.ts`.\n\n**Expected net lines:** about +30. **Size:** M. **Depends on:** #2846 merged.\n\n**Start:** no, after #2846.\n",
+      "html_url": "https://github.com/tim-clifford6991/reachkit/issues/2860",
+      "created_at": "2026-11-18T00:18:49Z",
+      "repository_url": "https://api.github.com/repos/tim-clifford6991/reachkit",
+      "labels": [
+        {
+          "id": 12066365571,
+          "node_id": "LA_kwDOUL-Ps88AAAACzzYggw",
+          "url": "https://api.github.com/repos/tim-clifford6991/reachkit/labels/feature",
+          "name": "feature",
+          "color": "0e8a16",
+          "default": false,
+          "description": "One shippable piece of the product, sized for one PR",
+          "archived_at": null,
+          "archived_by": null
+        },
+        {
+          "id": 12911788030,
+          "node_id": "LA_kwDOUL-Ps88AAAADAZo__g",
+          "url": "https://api.github.com/repos/tim-clifford6991/reachkit/labels/ready",
+          "name": "ready",
+          "color": "0e8a16",
+          "default": false,
+          "description": "Buildable without questions: Conditions, Invariants, Surfaces, Overlaps filled; dependencies stated",
+          "archived_at": null,
+          "archived_by": null
+        },
+        {
+          "id": 13003037809,
+          "node_id": "LA_kwDOUL-Ps88AAAADBwqccQ",
+          "url": "https://api.github.com/repos/tim-clifford6991/reachkit/labels/simplify",
+          "name": "simplify",
+          "color": "5319E7",
+          "default": false,
+          "description": "Nov 2026 simplification: thin rules, the six owner ideas, #2511",
+          "archived_at": null,
+          "archived_by": null
+        }
+      ],
+      "user": {
+        "login": "tim-clifford6991"
+      }
+    },
+    {
+      "number": 242,
+      "title": "fix(llm): let operators stop sending temperature, which OpenAI reasoning models reject",
+      "body": "## Intent\n\n**Urgent: reviews fail on current OpenAI models.** v1.5.0 sends `temperature: 0.0` on every review, verification, self-heal, agent-loop and chat call (`Some(0.0)` hard-coded in `crates/ar-review/src/{pipeline,verify,heal,agent_loop}.rs` and `crates/ar-chat/src/handler.rs`). OpenAI's reasoning models (the `gpt-5.x` and `gpt-6.x` families, and `o`-series) accept only the default temperature and reject the request. A deployment pointed at those models fails every review. The failure is logged by the gateway, and nothing is posted to the PR. Operators have no setting to work around it.\n\nFix it at the provider: an operator setting that stops `OpenAiProvider` from sending `temperature`, applied to every tier and every entrypoint. No model-name matching; the operator states it.\n\n## Acceptance criteria\n\n- [ ] A new environment variable `LLM_OMIT_TEMPERATURE` (boolean, default `false`) is read once at startup through the existing `parse_env` / `read_non_empty_env` helpers. When `true`, every `OpenAiProvider` the process builds (reasoning, cheap and any other chat tier) omits `temperature` from the `/v1/chat/completions` body, whatever the caller set. When `false` or unset, request bodies are byte-for-byte what v1.5.0 sends (callers' `Some(0.0)` still goes out), so Ollama and `gpt-4.x` deployments keep deterministic output.\n- [ ] It applies in both the gateway (`ar-gateway` startup) and the AgentCore entrypoint (`ar-cli` / `ar-agentcore`), and in any CLI command that builds a provider (e.g. `review`, `bench`), so no path still sends temperature when the setting is on.\n- [ ] An invalid value (not a boolean) fails startup with a clear error naming the variable, like the other env settings.\n- [ ] `OpenAiProvider` exposes this as a constructor option or builder method (for example `with_omit_temperature(bool)`), not a global. A wiremock test asserts the request body has no `temperature` key when it is on, and has `\"temperature\":0.0` when it is off.\n- [ ] Docs: `docs/DEPLOYMENT.md`, `docs/OPERATIONS.md` (or wherever the `LLM_*` variables are listed), `deploy/systemd/auto_review.env.example` and any other env example list `LLM_OMIT_TEMPERATURE`, saying to set it to `true` for OpenAI reasoning models (gpt-5.x, gpt-6.x, o-series) and leave it unset for Ollama and gpt-4.x.\n- [ ] `just ci` passes.\n\n## Notes\n\n- Ship as a `fix(llm):` commit so release-plz cuts a patch release (v1.5.1); the maintainer's deployment bumps to it.\n- The \"failure is invisible on the PR\" half is tracked separately; this item only removes the cause.\n",
+      "html_url": "https://github.com/jwilger/auto_review/issues/242",
+      "created_at": "2026-11-18T00:16:20Z",
+      "repository_url": "https://api.github.com/repos/jwilger/auto_review",
+      "labels": [
+        {
+          "id": 13108209809,
+          "node_id": "LA_kwDOTK5r1s8AAAADDU9okQ",
+          "url": "https://api.github.com/repos/jwilger/auto_review/labels/bucket:1",
+          "name": "bucket:1",
+          "color": "FEF2C0",
+          "default": false,
+          "description": "",
+          "archived_at": null,
+          "archived_by": null
+        },
+        {
+          "id": 13108210202,
+          "node_id": "LA_kwDOTK5r1s8AAAADDU9qGg",
+          "url": "https://api.github.com/repos/jwilger/auto_review/labels/station:build",
+          "name": "station:build",
+          "color": "FBCA04",
+          "default": false,
+          "description": "",
+          "archived_at": null,
+          "archived_by": null
+        },
+        {
+          "id": 13108210729,
+          "node_id": "LA_kwDOTK5r1s8AAAADDU9sKQ",
+          "url": "https://api.github.com/repos/jwilger/auto_review/labels/status:building",
+          "name": "status:building",
+          "color": "FEF2C0",
+          "default": false,
+          "description": "",
+          "archived_at": null,
+          "archived_by": null
+        },
+        {
+          "id": 13108211110,
+          "node_id": "LA_kwDOTK5r1s8AAAADDU9tpg",
+          "url": "https://api.github.com/repos/jwilger/auto_review/labels/factory:ready",
+          "name": "factory:ready",
+          "color": "C2E0C6",
+          "default": false,
+          "description": "",
+          "archived_at": null,
+          "archived_by": null
+        }
+      ],
+      "user": {
+        "login": "jwilger"
+      }
+    },
+    {
+      "number": 1081,
+      "title": "[WAIT][SG-ENG] User Experience Researchers — Fullstack Engineer (RAG/LLM) — LinkedIn 4490271064",
+      "body": "## Lifecycle reconciliation — application already submitted\n\nLinkedIn confirmed on **2026-11-17** that the candidate's application was sent for **Fullstack Engineer (RAG/LLM)** at **User Experience Researchers Pte Ltd (Singapore)**, Singapore.\n\n- Exact LinkedIn job identity: `4490271064`.\n- Evidence category: automated platform application confirmation; no human reply, assessment or interview.\n- Furthest stage: application received / WAIT.\n- Do not count this role as unsubmitted APPLY and do not reapply.\n- Work-pass support, salary, detailed employer-authored JD and current vacancy status are not established by the receipt.\n- No employer contact or submission was performed by this reconciliation; it records the owner's existing application evidence.",
+      "html_url": "https://github.com/kolihhan/job-resources/issues/1081",
+      "created_at": "2026-11-18T00:16:09Z",
+      "repository_url": "https://api.github.com/repos/kolihhan/job-resources",
+      "labels": [
+        {
+          "id": 12475641466,
+          "node_id": "LA_kwDOUzOVfM8AAAAC55sueg",
+          "url": "https://api.github.com/repos/kolihhan/job-resources/labels/market:sg",
+          "name": "market:sg",
+          "color": "ededed",
+          "default": false,
+          "description": null,
+          "archived_at": null,
+          "archived_by": null
+        },
+        {
+          "id": 12475653756,
+          "node_id": "LA_kwDOUzOVfM8AAAAC55tefA",
+          "url": "https://api.github.com/repos/kolihhan/job-resources/labels/status:wait",
+          "name": "status:wait",
+          "color": "ededed",
+          "default": false,
+          "description": null,
+          "archived_at": null,
+          "archived_by": null
+        }
+      ],
+      "user": {
+        "login": "kolihhan"
+      }
+    },
+    {
+      "number": 253,
+      "title": "🛑 de.NBI LLM API is down",
+      "body": "In [`9353134`](https://github.com/fwten/hxgl-upptime/commit/93531343db13f3ab0e80ff1ee498b11b3330e094\n), de.NBI LLM API (https://$DENBI_LLM_API/health/liveness/) was **down**:\n- HTTP code: 0\n- Response time: 0 ms\n",
+      "html_url": "https://github.com/fwten/hxgl-upptime/issues/253",
+      "created_at": "2026-11-18T00:13:48Z",
+      "repository_url": "https://api.github.com/repos/fwten/hxgl-upptime",
+      "labels": [
+        {
+          "id": 7456234630,
+          "node_id": "LA_kwDOMuXGls8AAAABvG0chg",
+          "url": "https://api.github.com/repos/fwten/hxgl-upptime/labels/status",
+          "name": "status",
+          "color": "ededed",
+          "default": false,
+          "description": null,
+          "archived_at": null,
+          "archived_by": null
+        },
+        {
+          "id": 10168752870,
+          "node_id": "LA_kwDOMuXGls8AAAACXhra5g",
+          "url": "https://api.github.com/repos/fwten/hxgl-upptime/labels/de-nbi-llm-api",
+          "name": "de-nbi-llm-api",
+          "color": "ededed",
+          "default": false,
+          "description": null,
+          "archived_at": null,
+          "archived_by": null
+        }
+      ],
+      "user": {
+        "login": "fwten"
+      }
+    }
+  ]
+}

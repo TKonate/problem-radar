@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install the package and the development tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Lint with ruff
+        run: ruff check .
+
+      - name: Check formatting with ruff
+        run: ruff format --check .
+
+      - name: Type-check with mypy
+        run: mypy
+
+      - name: Run the test suite with coverage
+        run: pytest -q --cov=problem_radar --cov-report=term-missing --cov-fail-under=90
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Build the distribution
+        run: |
+          python -m pip install --upgrade pip build
+          python -m build
+
+      - name: Install the wheel and run the CLI
+        run: |
+          pip install dist/*.whl
+          radar --version
+          radar init /tmp/radar-smoke
+          radar -c /tmp/radar-smoke/config/radar.json sources

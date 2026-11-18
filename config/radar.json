@@ -1,0 +1,57 @@
+{
+  "storage": {
+    "data_dir": "../data"
+  },
+  "cluster": {
+    "threshold": 0.45,
+    "max_signals": 2000
+  },
+  "report": {
+    "top": 15,
+    "output_dir": "../reports"
+  },
+  "sources": [
+    {
+      "name": "hackernews",
+      "kind": "hackernews",
+      "tier": "social",
+      "enabled": true,
+      "limit": 20,
+      "queries": [
+        "Ask HN",
+        "alternative to",
+        "keeps crashing"
+      ]
+    },
+    {
+      "name": "github",
+      "kind": "github",
+      "tier": "issue-tracker",
+      "enabled": true,
+      "limit": 20,
+      "queries": [
+        "\"model not found\" is:issue is:open comments:>3",
+        "\"connection refused\" is:issue is:open comments:>3",
+        "\"out of memory\" is:issue is:open comments:>3",
+        "\"rate limit exceeded\" is:issue is:open comments:>3"
+      ]
+    },
+    {
+      "name": "rss",
+      "kind": "rss",
+      "tier": "blog",
+      "enabled": true,
+      "limit": 10,
+      "feeds": [
+        "https://simonwillison.net/atom/everything/"
+      ]
+    },
+    {
+      "name": "manual",
+      "kind": "manual",
+      "tier": "unknown",
+      "enabled": true,
+      "path": "../data/manual-signals.jsonl"
+    }
+  ]
+}

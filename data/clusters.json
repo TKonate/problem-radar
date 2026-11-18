@@ -1,0 +1,2754 @@
+{
+  "version": 1,
+  "count": 67,
+  "clusters": [
+    {
+      "id": "9db973fa60",
+      "title": "Fork sync: upstream and community fixes for pdf-inspector and AnyDoc (Mac + Windows hubs)",
+      "statement": "Fork sync: upstream and community fixes for pdf-inspector and AnyDoc (Mac + Windows hubs) — Its Windows failure was `test-ios-failed-tests.sh`, which #919 now skips.",
+      "signal_ids": [
+        "dca3995fadb276d3"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "recurring-bug"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 35.7,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 15.0,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 4 distinct pain word(s) (crash, failed, fails, panic) → 15.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (64.9 → 35.7)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "a322bf2fab",
+      "title": "Intel Arc A770: VK_ERROR_DEVICE_LOST after ~10 frames (0.2.4)",
+      "statement": "Intel Arc A770: VK_ERROR_DEVICE_LOST after ~10 frames (0.2.4) — ### What happened The attached files are runtime logs only (fefw.log, setup.log, fefw_crash.txt).",
+      "signal_ids": [
+        "7afc79485fa5b6bc"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "performance"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 35.7,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 15.0,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 6 distinct pain word(s) (crash, error, failed, lost, missing, timeout) → 15.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (64.9 → 35.7)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "90145b67b9",
+      "title": "lampOS voice: a load stall during an agent make makes the speaker reference start stale (40 ms) and the voice exits",
+      "statement": "lampOS voice: a load stall during an agent make makes the speaker reference start stale (40 ms) and the voice exits — ## Seen: lamp-c0a4, 13584, 17 Nov ``` 08:31:54.955 lamp-voice: no capture frame kept for 63 ms while a turn is held: it is cut 40 ms before its lease lapses, as a gap cuts it 08:31:55.040 lamp-voice: ref.d.speaker: Connection refused (os error 111) 08:31:55.046 lamp-voice: reference InvalidStart:…",
+      "signal_ids": [
+        "ce17e6eb5abd51e2"
+      ],
+      "domains": [
+        "ai-agents"
+      ],
+      "categories": [
+        "missing-feature"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 35.7,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 15.0,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 4 distinct pain word(s) (can't, error, failed, invalid) → 15.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (64.9 → 35.7)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "64690ac40f",
+      "title": "[doc] Documentation drift audit: 50 findings with fixes, open questions and commit plan",
+      "statement": "[doc] Documentation drift audit: 50 findings with fixes, open questions and commit plan — ## Summary | Category | Count (main findings) | Additional one-liners in Appendix | |---|---|---| | stale-fact | 21 | 10 | | missing | 7 | 4 | | orphan | 6 | 3 | | example-broken | 9 | 0 | | structural | 0 | 1 | | versioning | 3 | 2 | | gap | 4 | 3 | | **Total** | **50** | **23** | Top 5…",
+      "signal_ids": [
+        "5d5145bba09f6a74"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "docs-gap"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 33.6,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 11.2,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 3 distinct pain word(s) (broken, missing, timeout) → 11.2/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (61.1 → 33.6)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "25bcdf08ee",
+      "title": "Helm chart: allow webhook lifecycle (preStop) and terminationGracePeriodSeconds to avoid refused admission calls during drains",
+      "statement": "Helm chart: allow webhook lifecycle (preStop) and terminationGracePeriodSeconds to avoid refused admission calls during drains — Admission calls dialled in that gap fail: ``` failed calling webhook \"validate.externalsecret.external-secrets.io\": failed to call webhook: Post \"https://external-secrets-webhook.external-secrets.svc:443/validate-external-secrets-io-v1-externalsecret?timeout=5s\": dial tcp <pod-ip>:10250: connect:…",
+      "signal_ids": [
+        "72422af63ec3606c"
+      ],
+      "domains": [
+        "data-infra"
+      ],
+      "categories": [
+        "integration-pain"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 33.6,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 11.2,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 3 distinct pain word(s) (failed, fails, timeout) → 11.2/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (61.1 → 33.6)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "e95fa1694b",
+      "title": "MyMiniFactory: subscriber model fails with \"could not be found, or isn't public\" even though the account can download it",
+      "statement": "MyMiniFactory: subscriber model fails with \"could not be found, or isn't public\" even though the account can download it — Importing https://www.myminifactory.com/object/3d-print-tiny-cookie-dragon-and-wyvern-875764 fails, both by pasting the link in Thingport and with Thingport Grab, with: \"This MyMiniFactory object could not be found, or isn't public.\" The backend log shows the same message on each retry: [import]…",
+      "signal_ids": [
+        "20da1cdce19d4997"
+      ],
+      "domains": [
+        "ai-agents"
+      ],
+      "categories": [
+        "recurring-bug"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 33.6,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 11.2,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 3 distinct pain word(s) (error, failed, fails) → 11.2/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (61.1 → 33.6)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "defceb304b",
+      "title": "reading first: the platform's own audit write inside an action body's ctx.api.transaction logs 'Audit write FAILED on sys_audit_log (no such table)' on 18.5.0 and main",
+      "statement": "reading first: the platform's own audit write inside an action body's ctx.api.transaction logs 'Audit write FAILED on sys_audit_log (no such table)' on 18.5.0 and main — ## What happens In an action body's `ctx.api.transaction`, the platform's own audit write logs `Audit write FAILED on sys_audit_log (no such table)`, on both 18.5.0 and main.",
+      "signal_ids": [
+        "83c363564759a968"
+      ],
+      "domains": [
+        "data-infra"
+      ],
+      "categories": [
+        "integration-pain"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 33.6,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 11.2,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 3 distinct pain word(s) (failed, lost, security) → 11.2/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (61.1 → 33.6)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "6d7b936e12",
+      "title": "tensor blk.0.ssm_beta.weight not found",
+      "statement": "tensor blk.0.ssm_beta.weight not found — When I run the command (ollama run mymodel),the error occured: <img width=\"1339\" height=\"64\" alt=\"image-20261116202425332\" src=\"https://github.com/user-attachments/assets/506fdcef-71ce-4cd4-995d-fc1ee3807f1a\" /> The gguf model file can be loaded by by llama-server.exe(in…",
+      "signal_ids": [
+        "5ebcdc6482eb66a1"
+      ],
+      "domains": [
+        "ai-agents"
+      ],
+      "categories": [
+        "missing-feature"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 33.6,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 11.2,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 3 distinct pain word(s) (cannot, error, not found) → 11.2/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (61.1 → 33.6)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "0a2ebf230d",
+      "title": "epic: documentation built on facts, with drift detected and fixed automatically (design needed)",
+      "statement": "epic: documentation built on facts, with drift detected and fixed automatically (design needed) — A read-only sweep of main `95c7b40b` (2026-11-16) found **183 findings: 61 WRONG, 60 STALE, 33 MISSING and 29 style/nit** across four slices.",
+      "signal_ids": [
+        "94d8cecb71a37ef1"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "integration-pain"
+      ],
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "score": {
+        "total": 33.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.8,
+          "severity": 11.2,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 2 day(s) old, half-life 90 days → 0.98",
+          "severity: 3 distinct pain word(s) (error, missing, security) → 11.2/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (61.0 → 33.5)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "8195641107",
+      "title": "main-broken: developing-today/code id @86b594d — basic: nix flake check (biome-check)",
+      "statement": "main-broken: developing-today/code id @86b594d — basic: nix flake check (biome-check) — Main-tier workflow `id` failed on main.",
+      "signal_ids": [
+        "09384d33f525bc35"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "recurring-bug"
+      ],
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "score": {
+        "total": 33.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.7,
+          "severity": 11.2,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 3 day(s) old, half-life 90 days → 0.98",
+          "severity: 3 distinct pain word(s) (broken, crash, failed) → 11.2/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (60.9 → 33.5)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "740d49034a",
+      "title": "Issue with updating price information",
+      "statement": "Issue with updating price information — **Describe the bug** Go to Set to Price Guide and it cannot update items **To Reproduce** Steps to reproduce the behavior: 1.",
+      "signal_ids": [
+        "70f424ed6abaffcb"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "missing-feature"
+      ],
+      "first_seen": "2026-11-14",
+      "last_seen": "2026-11-14",
+      "score": {
+        "total": 33.4,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.5,
+          "severity": 11.2,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 4 day(s) old, half-life 90 days → 0.97",
+          "severity: 3 distinct pain word(s) (cannot, error, missing) → 11.2/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (60.8 → 33.4)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "ad81c53155",
+      "title": "dogfood: Background job id lost after start",
+      "statement": "dogfood: Background job id lost after start — A later `job: \"job-2\"` read answered `Tool job not found`, although the same command run in the foreground then exited 0.",
+      "signal_ids": [
+        "39a5983db74e5a55"
+      ],
+      "domains": [
+        "ai-agents"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 31.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 7.5,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 2 distinct pain word(s) (lost, not found) → 7.5/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (57.4 → 31.5)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "6b30f1b472",
+      "title": "Host shmem leak to 17 GB (unreclaimable) after `xe ... VM worker error: -12` while running OpenCL/OpenVINO on the PF (2026.10.28, kernel 7.0.14)",
+      "statement": "Host shmem leak to 17 GB (unreclaimable) after `xe ... VM worker error: -12` while running OpenCL/OpenVINO on the PF (2026.10.28, kernel 7.0.14) — The leak starts ~3 s after the driver logs its only warning: ``` [114336.691483] xe 0000:00:02.0: [drm] VM worker error: -12 ``` Note: this looks different from #425 / #254 — no guest/VM uses a GPU VF here.",
+      "signal_ids": [
+        "3a323e84b9da40c7"
+      ],
+      "domains": [
+        "ai-agents"
+      ],
+      "categories": [
+        "performance"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 31.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 7.5,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 2 distinct pain word(s) (error, leak) → 7.5/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (57.4 → 31.5)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "8f7d66c24a",
+      "title": "openai-codex: GPT-6.2 Sol missing after refresh and rejected while native Codex works",
+      "statement": "openai-codex: GPT-6.2 Sol missing after refresh and rejected while native Codex works — A direct OMP request for Sol fails model resolution.",
+      "signal_ids": [
+        "02e901c55eb4934a"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "recurring-bug"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 31.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 7.5,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 2 distinct pain word(s) (fails, missing) → 7.5/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (57.4 → 31.5)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "53d791b12d",
+      "title": "Follow-up to #9418: Workflow heal: Test & Mark Stable Release failed on stable",
+      "statement": "Follow-up to #9418: Workflow heal: Test & Mark Stable Release failed on stable — Follow-up: Follow-up: make a Phase 4 review timeout caused by a run that never started classify as environmental.",
+      "signal_ids": [
+        "53904953663e1a1f"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "integration-pain"
+      ],
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "score": {
+        "total": 31.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.8,
+          "severity": 7.5,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 2 day(s) old, half-life 90 days → 0.98",
+          "severity: 2 distinct pain word(s) (failed, timeout) → 7.5/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (57.2 → 31.5)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "c210ce8216",
+      "title": "Stuck states P13B: project security pass rebinds a clean pass across clean sync merges (SECURITY_PASS_REBOUND)",
+      "statement": "Stuck states P13B: project security pass rebinds a clean pass across clean sync merges (SECURITY_PASS_REBOUND) — Implement: Stuck states P13B: project security pass rebinds a clean pass across clean sync merges (SECURITY_PASS_REBOUND) This issue is part of the project tracked in #8291.",
+      "signal_ids": [
+        "acd3b3709c84fefd"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "score": {
+        "total": 31.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.8,
+          "severity": 7.5,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 2 day(s) old, half-life 90 days → 0.98",
+          "severity: 2 distinct pain word(s) (blocked, security) → 7.5/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (57.2 → 31.5)"
+        ],
+        "recommendation": "watch"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "0eeb101a7c",
+      "title": "[P0] CRM падает: сервер ломает сам себя при каждом деплое, а сторож не поднимает упавший Next.js",
+      "statement": "[P0] CRM падает: сервер ломает сам себя при каждом деплое, а сторож не поднимает упавший Next.js — ## Что не так сейчас RunCloud за 7–16 ноября 2026 прислал 9 тревог «connect() failed (111: Connection refused) to upstream 172.17.0.1:3000» (502, в том числе на `/api/v1/leads`).",
+      "signal_ids": [
+        "9ed6716c6d79b6f0"
+      ],
+      "domains": [
+        "data-infra"
+      ],
+      "categories": [
+        "integration-pain"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 29.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 1 distinct pain word(s) (failed) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (53.6 → 29.5)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "59b4858ab7",
+      "title": "A loom-daemon child process grew to 28-35 GB and was OOM-killed twice on one worker; nothing logs which subcommand",
+      "statement": "A loom-daemon child process grew to 28-35 GB and was OOM-killed twice on one worker; nothing logs which subcommand — ## Impact Small so far: dispatch continued and at most one step was lost per kill.",
+      "signal_ids": [
+        "d830cce0e475e400"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "performance"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 29.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 1 distinct pain word(s) (lost) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (53.6 → 29.5)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "68869bb095",
+      "title": "Agent notes for repo docs and skills (collector)",
+      "statement": "Agent notes for repo docs and skills (collector) — Example: > `.agents/skills/testing-and-ci/SKILL.md`: design system CSS and token checks go in `scripts/*.test.ts`; web tests cannot import `node:fs`, and Vitest reads `?raw` CSS as an empty string.",
+      "signal_ids": [
+        "677a633204d685af"
+      ],
+      "domains": [
+        "ai-agents"
+      ],
+      "categories": [
+        "missing-feature"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 29.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 1 distinct pain word(s) (cannot) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (53.6 → 29.5)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "5fd7745c9f",
+      "title": "Android: server list and host connect are slow (~30 serial backend round trips, repeated /me identity checks)",
+      "statement": "Android: server list and host connect are slow (~30 serial backend round trips, repeated /me identity checks) — `GoogleSyncPlugin` single-thread executor + `synchronized(authentication)`; silent ID-token renewal (up to 30s timeout) happens on the critical path of the first action after an idle hour.",
+      "signal_ids": [
+        "935cfae2acd2edcf"
+      ],
+      "domains": [
+        "data-infra"
+      ],
+      "categories": [
+        "performance"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 29.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 1 distinct pain word(s) (timeout) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (53.6 → 29.5)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "99c10e710c",
+      "title": "array_get_index has a memory leak",
+      "statement": "array_get_index has a memory leak — This is a second attempt at reporting a bug causing `array_get_index` to leak memory; my previous attempt via the bug reporter was closed without much inspection admittedly due to my own shortcomings of not providing enough reproduction info/proof of issue.",
+      "signal_ids": [
+        "7064cebd81336314"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "recurring-bug"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 29.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 1 distinct pain word(s) (leak) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (53.6 → 29.5)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "11b68c926b",
+      "title": "v0.1.13 still fails at warm up.",
+      "statement": "v0.1.13 still fails at warm up. — ### What happens fails at warm up ### Version v0.1.13 ### System amd ### GPU AMD (Radeon, Ryzen APU, Steam Deck, ROG Ally) ### Where Start screen or setup ### Steps to reproduce TOTK and Ocarina ports work flawlessly.",
+      "signal_ids": [
+        "85bb816d55a74e03"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "recurring-bug"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 29.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 1 distinct pain word(s) (fails) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (53.6 → 29.5)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "5ad6ed170b",
+      "title": "bug(desktop): long chat replies are never voiced — TTS audio is fetched successfully but playback stops after a few characters or stays silent",
+      "statement": "bug(desktop): long chat replies are never voiced — TTS audio is fetched successfully but playback stops after a few characters or stays silent — #### Console No speech-related errors at all — only unrelated websocket messages (`[chat-sync] ...",
+      "signal_ids": [
+        "995c57d8de1ffa12"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "recurring-bug"
+      ],
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "score": {
+        "total": 29.4,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.8,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 2 day(s) old, half-life 90 days → 0.98",
+          "severity: 1 distinct pain word(s) (error) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (53.5 → 29.4)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "28ea7a1518",
+      "title": "[VISUAL CAD / 8] Real deterministic SVG and PNG300 export, printing extension and provenance",
+      "statement": "[VISUAL CAD / 8] Real deterministic SVG and PNG300 export, printing extension and provenance — Старая замороженная E695 TL494 (23 parts/15 literal source Nets/62 true PinRef/16 TI DA1/2 non-electric b) — инвариант; старые 91 wire/37 junction и 9 ERR/32 WARN — intentionally invalid historical negative, не готовая новая схема.",
+      "signal_ids": [
+        "9f787d966a9be24f"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "integration-pain"
+      ],
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "score": {
+        "total": 29.4,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.7,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 3 day(s) old, half-life 90 days → 0.98",
+          "severity: 1 distinct pain word(s) (invalid) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (53.4 → 29.4)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "711a6ddb8b",
+      "title": "Cut the model-read ecosystem specifics from user-interface, starting with its framework pages, their concerns index and tests",
+      "statement": "Cut the model-read ecosystem specifics from user-interface, starting with its framework pages, their concerns index and tests — ## Parent Refs #15703 Source: #15730 (blind classification under rules revision 5, [#15730 comment 6950077480](https://github.com/melodic-software/claude-code-plugins/issues/15730#issuecomment-6950077480)), cut item 4 of 47 in its filing order.",
+      "signal_ids": [
+        "34453b20a1aee582"
+      ],
+      "domains": [
+        "ai-agents"
+      ],
+      "categories": [
+        "ux-friction"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 27.4,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (49.9 → 27.4)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "cbe16c1c08",
+      "title": "Proposal: opt-in lock-down after pairing (API key, web login, OTA) with button-hold reset",
+      "statement": "Proposal: opt-in lock-down after pairing (API key, web login, OTA) with button-hold reset — Customer request (Ropener): lock a unit down once it's paired with Home Assistant.",
+      "signal_ids": [
+        "3ca18ae55c1be3f1"
+      ],
+      "domains": [
+        "security"
+      ],
+      "categories": [
+        "integration-pain"
+      ],
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "score": {
+        "total": 27.4,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 14.9,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 12.8
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (github) → 5.0/20",
+          "recency: last signal 1 day(s) old, half-life 90 days → 0.99",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.85 → 12.8/15",
+          "corroboration: 1 signal(s) → ×0.55 (49.9 → 27.4)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "f55a6d94c3",
+      "title": "Why Birds Keep Crashing into Cars and Planes",
+      "statement": "Why Birds Keep Crashing into Cars and Planes",
+      "signal_ids": [
+        "ca2fb5e2c3e31006",
+        "272746bf1beb57fe"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2015-03-02",
+      "last_seen": "2025-07-05",
+      "score": {
+        "total": 25.3,
+        "components": {
+          "volume": 11.5,
+          "diversity": 5.0,
+          "recency": 0.3,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 2 signal(s), saturating at 10 → 11.5/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 501 day(s) old, half-life 90 days → 0.02",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 2 signal(s) → ×0.75 (33.8 → 25.3)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "ea835c107b",
+      "title": "Social Security website keeps crashing, as DOGE demands cuts to IT staff",
+      "statement": "Social Security website keeps crashing, as DOGE demands cuts to IT staff",
+      "signal_ids": [
+        "90e576389dd84e6f"
+      ],
+      "domains": [
+        "security"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2025-04-08",
+      "last_seen": "2025-04-08",
+      "score": {
+        "total": 18.2,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.2,
+          "severity": 7.5,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 589 day(s) old, half-life 90 days → 0.01",
+          "severity: 2 distinct pain word(s) (crash, security) → 7.5/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (33.1 → 18.2)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "aebfa21f9e",
+      "title": "Human drivers keep crashing into Waymos",
+      "statement": "Human drivers keep crashing into Waymos",
+      "signal_ids": [
+        "909fb4668a49621f"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2026-04-23",
+      "last_seen": "2026-04-23",
+      "score": {
+        "total": 17.7,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 3.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 209 day(s) old, half-life 90 days → 0.20",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (32.2 → 17.7)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "fbfbd7b057",
+      "title": "The government of my country blocked VPN access. What should I use?",
+      "statement": "The government of my country blocked VPN access. What should I use? — Earlier today, the government blocked access to Twitter &amp; Discord knowing news spread mainly through those channels.",
+      "signal_ids": [
+        "7c940f3f58cf44a1"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2025-08-28",
+      "last_seen": "2025-08-28",
+      "score": {
+        "total": 17.4,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.5,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 447 day(s) old, half-life 90 days → 0.03",
+          "severity: 1 distinct pain word(s) (blocked) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (31.7 → 17.4)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "e6d94e97e4",
+      "title": "Delivery robots keep crashing into bus shelters",
+      "statement": "Delivery robots keep crashing into bus shelters",
+      "signal_ids": [
+        "99ed0128510d6206"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2026-03-27",
+      "last_seen": "2026-03-27",
+      "score": {
+        "total": 17.4,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 2.4,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 236 day(s) old, half-life 90 days → 0.16",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (31.7 → 17.4)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "11e803be59",
+      "title": "I’m an FCC Commissioner proposing regulation of IoT security updates",
+      "statement": "I’m an FCC Commissioner proposing regulation of IoT security updates — Hi everyone, I’m FCC Commissioner Nathan Simington, and I’m here to discuss security updates for IoT devices and how you can make a difference by filing comments with the FCC.<p>As you know, serious vulnerabilities are common in IoT, and it often takes too long for these to be patched on end-user…",
+      "signal_ids": [
+        "890362ead42c878e"
+      ],
+      "domains": [
+        "security"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2023-09-05",
+      "last_seen": "2023-09-05",
+      "score": {
+        "total": 17.2,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 1170 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (security) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (31.2 → 17.2)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "030d37c52c",
+      "title": "Pycharm Keeps Crashing",
+      "statement": "Pycharm Keeps Crashing — https:&#x2F;&#x2F;pastebin.com&#x2F;ADHtMRdr<p>this is crash.txt report.<p>My laptop is 1 TB HDD<p>8 GB RAM<p>No ssd<p>My general laptop usage is heavy.<p>1) I am using it alone, without using other programs-&gt; pycharm still gets crashed<p>2) I use discord for streaming in study with me…",
+      "signal_ids": [
+        "1cd88e8128e21a28"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "recurring-bug"
+      ],
+      "first_seen": "2022-01-31",
+      "last_seen": "2022-01-31",
+      "score": {
+        "total": 17.2,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 1752 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (31.2 → 17.2)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "26061021f0",
+      "title": "Gmail account security",
+      "statement": "Gmail account security — I have a gmail account that I rarely use, but I know the password.",
+      "signal_ids": [
+        "389c71c41135278f"
+      ],
+      "domains": [
+        "security"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2022-01-23",
+      "last_seen": "2022-01-23",
+      "score": {
+        "total": 17.2,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 1760 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (security) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (31.2 → 17.2)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "92a799cc49",
+      "title": "Promise (YC W18) – Cost-effective, more humane alternative to jail",
+      "statement": "Promise (YC W18) – Cost-effective, more humane alternative to jail — The majority of these individuals remain in custody because they cannot afford to pay for their release.",
+      "signal_ids": [
+        "33fa329f38e61960"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "missing-feature"
+      ],
+      "first_seen": "2018-03-20",
+      "last_seen": "2018-03-20",
+      "score": {
+        "total": 17.2,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 3165 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (cannot) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (31.2 → 17.2)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "511d1181e5",
+      "title": "What do you want to see in Ubuntu 17.10?",
+      "statement": "What do you want to see in Ubuntu 17.10? — Everything is fair game -- Kernel, Security, Desktop apps, Unity&#x2F;Mir&#x2F;Wayland&#x2F;Gnome, Snap packages, Kubernetes, Docker, OpenStack, Juju, MAAS, Landscape, default installed packages (add or remove), cloud images, and many more I&#x27;m sure I&#x27;ve forgotten...<p>17.10 will be our…",
+      "signal_ids": [
+        "ad2759ab0448c9cf"
+      ],
+      "domains": [
+        "data-infra"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2017-03-31",
+      "last_seen": "2017-03-31",
+      "score": {
+        "total": 17.2,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 3519 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (security) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (31.2 → 17.2)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "fc3596e355",
+      "title": "Is S3 down?",
+      "statement": "Is S3 down? — I&#x27;m getting<p>{ &quot;errorCode&quot; : &quot;InternalError&quot; }<p>When I attempt to use the AWS Console to view s3",
+      "signal_ids": [
+        "058ac57fcd1eb484"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2017-02-28",
+      "last_seen": "2017-02-28",
+      "score": {
+        "total": 17.2,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 3550 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (error) → 3.8/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (31.2 → 17.2)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "6fa4012e94",
+      "title": "Tesla's ‘Robotaxis' Keep Crashing—Even With Human ‘Safety Monitors' Onboard",
+      "statement": "Tesla's ‘Robotaxis' Keep Crashing—Even With Human ‘Safety Monitors' Onboard",
+      "signal_ids": [
+        "4ea0ec0d0a55956f"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2025-11-04",
+      "last_seen": "2025-11-04",
+      "score": {
+        "total": 16.5,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.8,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 379 day(s) old, half-life 90 days → 0.05",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (30.0 → 16.5)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "8815648a1e",
+      "title": "In Boston, Trucks Keep Crashing into Low Bridges",
+      "statement": "In Boston, Trucks Keep Crashing into Low Bridges",
+      "signal_ids": [
+        "37097597ed32c98d"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2025-08-28",
+      "last_seen": "2025-08-28",
+      "score": {
+        "total": 16.3,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.5,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 447 day(s) old, half-life 90 days → 0.03",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.7 → 16.3)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "360bace84a",
+      "title": "A manifesto for everyone stuck in the system that keeps crashing you",
+      "statement": "A manifesto for everyone stuck in the system that keeps crashing you",
+      "signal_ids": [
+        "3e512172230340f4"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2025-04-03",
+      "last_seen": "2025-04-03",
+      "score": {
+        "total": 16.2,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.2,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 594 day(s) old, half-life 90 days → 0.01",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.4 → 16.2)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "9d2b4de751",
+      "title": "Google Search app on Android keeps crashing in widespread bug",
+      "statement": "Google Search app on Android keeps crashing in widespread bug",
+      "signal_ids": [
+        "aec215329d828f2c"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "recurring-bug"
+      ],
+      "first_seen": "2024-09-15",
+      "last_seen": "2024-09-15",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 794 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.3 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "b1ecbda7d6",
+      "title": "Some Intel Core chips keep crashing, game devs complain",
+      "statement": "Some Intel Core chips keep crashing, game devs complain",
+      "signal_ids": [
+        "52a78d668dbec7d5"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2024-02-23",
+      "last_seen": "2024-02-23",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 999 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.2 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "219fef3559",
+      "title": "The LLama Effect: Leak Sparked a Series of Open Source Alternatives to ChatGPT",
+      "statement": "The LLama Effect: Leak Sparked a Series of Open Source Alternatives to ChatGPT",
+      "signal_ids": [
+        "521fa3c9cc0f577e"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2023-04-09",
+      "last_seen": "2023-04-09",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 1319 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (leak) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.2 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "187018d06e",
+      "title": "Ethereum launch coordinator writes about why crypto keeps crashing",
+      "statement": "Ethereum launch coordinator writes about why crypto keeps crashing",
+      "signal_ids": [
+        "251a0bf9634105e5"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2022-06-16",
+      "last_seen": "2022-06-16",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 1616 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.2 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "f6d4a70994",
+      "title": "Why Ships Keep Crashing",
+      "statement": "Why Ships Keep Crashing",
+      "signal_ids": [
+        "72d576816260306d"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2021-04-02",
+      "last_seen": "2021-04-02",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2056 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.2 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "ce2a66da35",
+      "title": "PSA: If your Android apps keep crashing, uninstall Android System WebView",
+      "statement": "PSA: If your Android apps keep crashing, uninstall Android System WebView",
+      "signal_ids": [
+        "7fddd02610c8dcff"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2021-03-23",
+      "last_seen": "2021-03-23",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2066 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.2 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "786898d97d",
+      "title": "Facebook’s Ad Network Keeps Crashing, and Clients Are Fuming",
+      "statement": "Facebook’s Ad Network Keeps Crashing, and Clients Are Fuming",
+      "signal_ids": [
+        "8f24c85056505269"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2019-08-08",
+      "last_seen": "2019-08-08",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2659 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.2 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "0297071166",
+      "title": "Microsoft employee installs Chrome mid-presentation because Edge keeps crashing",
+      "statement": "Microsoft employee installs Chrome mid-presentation because Edge keeps crashing",
+      "signal_ids": [
+        "06a6495cd2ce3ca6"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2017-10-30",
+      "last_seen": "2017-10-30",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 3306 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.2 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "1c926d6c58",
+      "title": "Whistleblower: Fairview Health Services' IT System Keeps Crashing",
+      "statement": "Whistleblower: Fairview Health Services' IT System Keeps Crashing",
+      "signal_ids": [
+        "50991799976fccfd"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2016-11-08",
+      "last_seen": "2016-11-08",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 3662 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.2 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "52dce7cd52",
+      "title": "Zynga Keeps Crashing, But Mark Pincus Is Having A Great Year",
+      "statement": "Zynga Keeps Crashing, But Mark Pincus Is Having A Great Year",
+      "signal_ids": [
+        "a70dd17f3d89c3fd"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2012-10-11",
+      "last_seen": "2012-10-11",
+      "score": {
+        "total": 16.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 3.8,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 5151 day(s) old, half-life 90 days → 0.00",
+          "severity: 1 distinct pain word(s) (crash) → 3.8/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (29.2 → 16.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "4b0afa6ffc",
+      "title": "Most interesting tech you built for just yourself?",
+      "statement": "Most interesting tech you built for just yourself? — Maybe you&#x27;ve created your own AR program for wearables that shows the definition of a word when you highlight it IRL, or you&#x27;ve built a personal calendar app for your family to display on a monitor in the kitchen.",
+      "signal_ids": [
+        "6621122570096bdd"
+      ],
+      "domains": [
+        "productivity"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2023-04-27",
+      "last_seen": "2023-04-27",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 1301 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "86878973f0",
+      "title": "What are some cool but obscure data structures you know about?",
+      "statement": "What are some cool but obscure data structures you know about? — I&#x27;m very interested in what types of interesting data structures are out there HN.",
+      "signal_ids": [
+        "2e4e9b6cd0f70d88"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "performance"
+      ],
+      "first_seen": "2022-07-21",
+      "last_seen": "2022-07-21",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 1581 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "cb83c7560e",
+      "title": "Are most of us developers lying about how much work we do?",
+      "statement": "Are most of us developers lying about how much work we do? — I have been working as a software developer for almost two decades.",
+      "signal_ids": [
+        "f00c6de7a31ada89"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "performance"
+      ],
+      "first_seen": "2021-12-16",
+      "last_seen": "2021-12-16",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 1798 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "9a98008fb4",
+      "title": "What tech job would let me get away with the least real work possible?",
+      "statement": "What tech job would let me get away with the least real work possible? — Hey HN,<p>I&#x27;ll probably get a lot of flak for this.",
+      "signal_ids": [
+        "856994f2bea66ff3"
+      ],
+      "domains": [
+        "dev-tools"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2021-04-07",
+      "last_seen": "2021-04-07",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2051 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "e910aecb8b",
+      "title": "Why is Reddit on mobile so obsessed with making me use their app?",
+      "statement": "Why is Reddit on mobile so obsessed with making me use their app? — Reddit constantly hassles me to use their app on mobile.<p>Why do they care so much?<p>I really don’t want to use their app.",
+      "signal_ids": [
+        "cd3795cf3291df13"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2020-08-19",
+      "last_seen": "2020-08-19",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2282 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "9712a046c5",
+      "title": "Am I the longest-serving programmer – 57 years and counting?",
+      "statement": "Am I the longest-serving programmer – 57 years and counting? — In May of 1963, I started my first full-time job as a computer programmer for Mitchell Engineering Company, a supplier of steel buildings.",
+      "signal_ids": [
+        "7b17f25d830a1a2e"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2020-05-31",
+      "last_seen": "2020-05-31",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2362 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "033377b4d7",
+      "title": "What's your quarantine side project?",
+      "statement": "What's your quarantine side project? — For those who are still under lockdown, what are you working on &#x2F; building &#x2F; learning?<p>I&#x27;ve been making excessive amounts of bread.",
+      "signal_ids": [
+        "7a63d58ef12ac7af"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2020-05-13",
+      "last_seen": "2020-05-13",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2380 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "52606800be",
+      "title": "I'm a software engineer going blind, how should I prepare?",
+      "statement": "I'm a software engineer going blind, how should I prepare? — I&#x27;m a 24 y&#x2F;o full stack engineer (I know some of you are rolling your eyes right now, just highlighting that I have experience on frontend apps as well as backend architecture).",
+      "signal_ids": [
+        "90c25bb13ce3b779"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "ux-friction"
+      ],
+      "first_seen": "2020-04-19",
+      "last_seen": "2020-04-19",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2404 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "48ba47bf11",
+      "title": "I've been slacking off at Google for 6 years. How can I stop this?",
+      "statement": "I've been slacking off at Google for 6 years. How can I stop this? — I joined Google straight from college 6 years ago as a SWE, and by now I&#x27;m used to the style of work of &quot;do the minimal work possible to do the job&quot;, I never challenge myself to deeply learn about what I&#x27;m doing, it&#x27;s almost like I&#x27;ve been using only 10% of my mental…",
+      "signal_ids": [
+        "f3a12660d512d1df"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2020-01-05",
+      "last_seen": "2020-01-05",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2509 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "1a0d61bb86",
+      "title": "What's the most valuable thing you can learn in an hour?",
+      "statement": "What's the most valuable thing you can learn in an hour? — A lot of what hackers do takes years of building knowledge upon knowledge.",
+      "signal_ids": [
+        "74149121f8b8e1bc"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2019-11-20",
+      "last_seen": "2019-11-20",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2555 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "ce52d9e11a",
+      "title": "Successful one-person online businesses?",
+      "statement": "Successful one-person online businesses? — This question was asked 2 years ago (<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=13326535\" rel=\"nofollow\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=13326535</a>) by mdoliwa, and I&#x27;m curious what it looks nowadays.<p>&gt; How many people on hacker news are running…",
+      "signal_ids": [
+        "8ca603f94d0cbae3"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2019-10-23",
+      "last_seen": "2019-10-23",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2583 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "635d5bc448",
+      "title": "What do you do with your Raspberry Pi?",
+      "statement": "What do you do with your Raspberry Pi? — I have Raspberry Pi and I mainly use it for VPN and piHole.",
+      "signal_ids": [
+        "6fe80d233a26f72b"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2019-06-24",
+      "last_seen": "2019-06-24",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2704 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "104ece5036",
+      "title": "What books changed the way you think about almost everything?",
+      "statement": "What books changed the way you think about almost everything? — I was reflecting today about how often I think about Freakonomics.",
+      "signal_ids": [
+        "2c953c47762c855b"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2019-02-05",
+      "last_seen": "2019-02-05",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2843 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "8f787224b3",
+      "title": "Best alternative to Gmail?",
+      "statement": "Best alternative to Gmail? — With the recent thread on privacy in Chrome, I&#x27;m thinking of switching off Gmail.",
+      "signal_ids": [
+        "040115fdafcb3197"
+      ],
+      "domains": [
+        "productivity"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2018-09-24",
+      "last_seen": "2018-09-24",
+      "score": {
+        "total": 15.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 10.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 2977 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 100% of fields filled (url, author, date, quote) → 10.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (27.5 → 15.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "6c4df9f06d",
+      "title": "Docs – Open source alternative to Notion or Outline",
+      "statement": "Docs – Open source alternative to Notion or Outline",
+      "signal_ids": [
+        "8330a91ce08eaa0c"
+      ],
+      "domains": [
+        "productivity"
+      ],
+      "categories": [
+        "docs-gap"
+      ],
+      "first_seen": "2025-03-16",
+      "last_seen": "2025-03-16",
+      "score": {
+        "total": 14.1,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.1,
+          "severity": 0.0,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 612 day(s) old, half-life 90 days → 0.01",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (25.6 → 14.1)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "f52c20088f",
+      "title": "How to self-learn electronics?",
+      "statement": "How to self-learn electronics?",
+      "signal_ids": [
+        "d1108808d6b73425"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2018-04-06",
+      "last_seen": "2018-04-06",
+      "score": {
+        "total": 14.0,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 3148 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (25.5 → 14.0)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    },
+    {
+      "id": "aa9d1b1870",
+      "title": "What are the best MOOCs you've taken?",
+      "statement": "What are the best MOOCs you've taken?",
+      "signal_ids": [
+        "687102c5c45aff4c"
+      ],
+      "domains": [
+        "other"
+      ],
+      "categories": [
+        "other"
+      ],
+      "first_seen": "2018-04-03",
+      "last_seen": "2018-04-03",
+      "score": {
+        "total": 14.0,
+        "components": {
+          "volume": 7.2,
+          "diversity": 5.0,
+          "recency": 0.0,
+          "severity": 0.0,
+          "evidence": 8.0,
+          "confidence": 5.2
+        },
+        "penalties": {},
+        "explanation": [
+          "volume: 1 signal(s), saturating at 10 → 7.2/25",
+          "diversity: 1 distinct source(s) (hackernews) → 5.0/20",
+          "recency: last signal 3151 day(s) old, half-life 90 days → 0.00",
+          "severity: 0 distinct pain word(s) (none) → 0.0/15",
+          "evidence: 80% of fields filled (url, author, date, quote) → 8.0/10",
+          "confidence: mean source confidence 0.35 → 5.2/15",
+          "corroboration: 1 signal(s) → ×0.55 (25.5 → 14.0)"
+        ],
+        "recommendation": "ignore"
+      },
+      "solutions": [],
+      "status": "clustered",
+      "note": ""
+    }
+  ]
+}
