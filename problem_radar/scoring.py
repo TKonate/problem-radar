@@ -7,7 +7,7 @@ disagree with one component without rejecting the whole number.
 What the score does **not** measure (documented in ``docs/methodology.md`` and
 repeated in every report):
 
-* market demand — mentions are not willingness to pay;
+* market demand: mentions are not willingness to pay;
 * feasibility or cost of a solution;
 * absence of an existing solution (that is a separate, human research step);
 * strategic interest for the person reading the report.
@@ -81,6 +81,12 @@ def _parse_date(value: str) -> date | None:
 
 
 def _reference_date(now: str | date | None) -> date:
+    """Turn the ``now`` argument into a date, defaulting to today in UTC.
+
+    ``now`` is injectable so tests and reports can be deterministic; a string
+    is parsed as an ISO date or datetime and an unusable value silently falls
+    back to the current date.
+    """
     if isinstance(now, date):
         return now
     if isinstance(now, str):
@@ -92,7 +98,7 @@ def _reference_date(now: str | date | None) -> date:
 
 @dataclass
 class ScoreOptions:
-    """Weights and thresholds, usually loaded from ``config.json``."""
+    """Weights and thresholds, usually loaded from ``config/radar.json``."""
 
     weights: dict[str, float] = field(default_factory=lambda: dict(DEFAULT_WEIGHTS))
     thresholds: dict[str, float] = field(default_factory=lambda: dict(DEFAULT_THRESHOLDS))
@@ -109,7 +115,11 @@ class ScoreOptions:
 
 
 def _evidence_completeness(signal: Signal) -> float:
-    """Share of the evidence fields that are filled in."""
+    """Share of the evidence fields that are filled in.
+
+    The URL alone is worth 0.40: without a link, no claim in the report can be
+    checked by a reader, so a signal with only a title scores 0.
+    """
     points = 0.0
     points += 0.40 if signal.url else 0.0
     points += 0.20 if signal.author else 0.0
@@ -166,7 +176,8 @@ def score_cluster(
         f"→ {components['diversity']:.1f}/{options.weights['diversity']:.0f}"
     )
 
-    # Recency: exponential decay from the most recent member.
+    # Recency: exponential decay from the most recent member, so an old problem
+    # fades gradually instead of falling off a cliff at one cutoff.
     dates = [
         parsed for parsed in (_parse_date(signal.published_at) for signal in members) if parsed
     ]
@@ -203,7 +214,8 @@ def score_cluster(
         f"→ {components['evidence']:.1f}/{options.weights['evidence']:.0f}"
     )
 
-    # Confidence: reliability of the source families.
+    # Confidence: the mean, not the minimum, so one weak mention cannot erase
+    # three strong ones, and one strong source cannot vouch for a whole cluster.
     mean_confidence = sum(signal.confidence for signal in members) / len(members)
     components["confidence"] = mean_confidence * options.weights["confidence"]
     explanation.append(

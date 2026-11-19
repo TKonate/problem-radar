@@ -2,9 +2,9 @@
 
 Two files, both plain text, both readable with ``cat``:
 
-* ``data/signals.jsonl`` — one signal per line, append-only, deduplicated by
+* ``data/signals.jsonl``: one signal per line, append-only, deduplicated by
   ``(source, source_id)``;
-* ``data/clusters.json`` — clusters with their score, solution checks, pipeline
+* ``data/clusters.json``: clusters with their score, solution checks, pipeline
   status and note.
 
 Re-clustering changes cluster ids (the id derives from the members). Human work
@@ -62,8 +62,12 @@ def load_signals(path: Path) -> list[Signal]:
 def append_signals(path: Path, signals: list[Signal]) -> tuple[int, int]:
     """Append new signals, skipping duplicates.
 
+    Duplicates are detected against the whole file, which is read once. The
+    file is append-only and the JSONL format tolerates an interrupted run, so
+    rewriting it is never necessary.
+
     Returns:
-        ``(added, skipped)``.
+        ``(added, skipped)``, in that order.
     """
     known = {signal.id for signal in load_signals(path)}
     fresh: list[Signal] = []
@@ -102,7 +106,7 @@ def load_clusters(path: Path) -> list[Cluster]:
 
 
 def save_clusters(path: Path, clusters: list[Cluster]) -> None:
-    """Write every cluster, sorted by score then title."""
+    """Write every cluster to ``path``, in the order given by the caller."""
     payload: dict[str, Any] = {
         "version": 1,
         "count": len(clusters),

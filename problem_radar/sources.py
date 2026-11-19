@@ -2,7 +2,7 @@
 
 Rules of the house (they are also in the README):
 
-* only public, documented endpoints — no scraping, no login, no bypass;
+* only public, documented endpoints: no scraping, no login, no bypass;
 * one request at a time per host, with a visible minimum interval;
 * a descriptive ``User-Agent``;
 * a hard cap on what is read (``limit``) and on response size;
@@ -117,6 +117,11 @@ class HttpClient:
         self._clock = time.monotonic
 
     def _throttle(self, host: str) -> None:
+        """Sleep for the remainder of the per-host interval, if any.
+
+        The clock is monotonic so a wall-clock adjustment cannot cause a burst
+        of requests. The first call to a host is never delayed.
+        """
         interval = self.min_intervals.get(host, 1.0)
         previous = self._last_call.get(host)
         if previous is not None:
@@ -157,6 +162,9 @@ class HttpClient:
                 if response.status == 200:
                     return response
                 if response.status in {429, 500, 502, 503, 504}:
+                    # Retry-After is the only correct answer to a 429; it is
+                    # capped so a hostile or broken header cannot stall a cron
+                    # run for minutes.
                     retry_after = response.headers.get("retry-after", "")
                     delay = float(retry_after) if retry_after.isdigit() else float(2**attempt)
                     last_error = f"HTTP {response.status}"
@@ -221,11 +229,6 @@ class CollectionResult:
     errors: list[str] = field(default_factory=list)
 
 
-# ---------------------------------------------------------------------------
-# Normalisation helpers
-# ---------------------------------------------------------------------------
-
-
 def _iso_date(value: str) -> str:
     """Best-effort ISO date from an RFC 2822 or ISO 8601 string."""
     if not value:
@@ -274,11 +277,6 @@ def _make_signal(
         confidence=SOURCE_TIERS.get(tier, SOURCE_TIERS["unknown"]),
         tags=tags,
     )
-
-
-# ---------------------------------------------------------------------------
-# Collectors
-# ---------------------------------------------------------------------------
 
 
 def collect_hackernews(
@@ -398,7 +396,9 @@ def parse_feed(text: str) -> list[dict[str, str]]:
     """Parse an RSS 2.0 or Atom feed into plain dictionaries.
 
     Returns:
-        Items with ``title``, ``link``, ``summary``, ``author``, ``published``.
+        One dictionary per item, carrying the keys found among ``title``,
+        ``link``, ``summary``, ``author`` and ``published``; absent elements are
+        simply missing from the dictionary.
 
     Raises:
         CollectionError: On malformed XML.
@@ -479,7 +479,9 @@ def collect_manual(
 
     Each line is an object with at least ``source_id``, ``title`` and ``url``;
     every :class:`~problem_radar.models.Signal` field may be supplied, and the
-    missing ones are inferred exactly like for the network collectors.
+    missing ones are inferred exactly like for the network collectors. A
+    ``domain`` or ``category`` given in the line is copied as-is, without
+    validation against the taxonomy, because a hand-written entry is trusted.
     """
     result = CollectionResult()
     path = Path(source.path or "data/manual-signals.jsonl")

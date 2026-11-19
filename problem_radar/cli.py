@@ -1,8 +1,10 @@
 """Command line interface.
 
 Design rules (same as the rest of the tool): small functions per subcommand,
-readable errors with exit codes, and no hidden network call — ``collect`` is the
-only command that touches the internet, and it says so.
+readable errors with exit codes, and no hidden network call. ``collect`` is the
+only command that touches the internet and it says so. The CLI never prompts
+and never edits the configuration: every input comes from argv or the config
+file, which is what keeps it usable from cron.
 """
 
 from __future__ import annotations
@@ -60,6 +62,11 @@ examples:
 
 
 def _add_config_option(parser: argparse.ArgumentParser) -> None:
+    """Add ``--config`` and ``--quiet`` to a parser or a subcommand.
+
+    Both options default to ``argparse.SUPPRESS`` so a subparser does not
+    overwrite the value parsed by the top-level parser with its own default.
+    """
     parser.add_argument(
         "-c",
         "--config",
@@ -171,17 +178,22 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
-
 def _out(args: argparse.Namespace, message: str = "") -> None:
+    """Print to stdout unless ``--quiet`` was given.
+
+    Errors deliberately bypass this helper and always go to stderr, so
+    ``--quiet`` can never hide a failure.
+    """
     if not getattr(args, "quiet", False):
         print(message)
 
 
 def _load(args: argparse.Namespace) -> Config:
+    """Load the configuration and make sure the output directories exist.
+
+    Directory creation happens here on purpose: every command may write, and
+    none should have to check for the directories first.
+    """
     config = load_config(getattr(args, "config", None) or "config/radar.json")
     config.ensure_directories()
     return config
@@ -203,11 +215,6 @@ def _find_cluster(clusters: list[Cluster], prefix: str) -> Cluster:
             [cluster.id for cluster in matches[:10]],
         )
     return matches[0]
-
-
-# ---------------------------------------------------------------------------
-# Commands
-# ---------------------------------------------------------------------------
 
 
 def cmd_init(args: argparse.Namespace) -> int:
@@ -273,7 +280,7 @@ def cmd_cluster(args: argparse.Namespace) -> int:
 
 
 def cmd_report(args: argparse.Namespace) -> int:
-    """Write the Markdown report (and optionally the JSON export)."""
+    """Print or write the Markdown report, and optionally the JSON export."""
     config = _load(args)
     clusters = load_or_rebuild(config)
     signals = load_signals(config.signals_path)
@@ -488,7 +495,12 @@ ALIASES = {"c": "collect", "cl": "cluster", "r": "report", "ls": "list"}
 
 
 def main(argv: list[str] | None = None) -> int:
-    """Entry point."""
+    """Parse ``argv``, dispatch the subcommand and return the exit code.
+
+    ``init`` is handled before the handler table because it is the only command
+    that works without a configuration file. Expected failures become a message
+    on stderr and exit code 1; anything else propagates.
+    """
     parser = build_parser()
     args = parser.parse_args(argv)
     command = ALIASES.get(args.command or "", args.command)

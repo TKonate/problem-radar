@@ -1,8 +1,10 @@
 """Report generation: a Markdown document and a JSON export.
 
 The report is the product of the tool. It must be readable in five minutes,
-link every claim to public evidence, and repeat what the score does not measure
-— otherwise a number becomes a decision by accident.
+link every claim to public evidence, and repeat what the score does not measure;
+otherwise a number becomes a decision by accident. Nothing here computes or
+persists state: the renderers take scored clusters and return text, and the two
+writers only put that text on disk.
 """
 
 from __future__ import annotations
@@ -36,6 +38,8 @@ STATUS_LABELS: dict[str, str] = {
     "deployed": "deployed",
 }
 
+#: Prose injected verbatim in every report: the caveats must travel with the
+#: numbers, because a report is often read far from its methodology document.
 LIMITS = """\
 **What the score does not measure.** Mentions are not demand; the score says nothing about
 willingness to pay, feasibility, solution cost, legal risk or strategic interest. An existing
@@ -64,6 +68,12 @@ def _members(cluster: Cluster, signals: dict[str, Signal]) -> list[Signal]:
 
 
 def _solution_block(cluster: Cluster) -> str:
+    """Render the solution section of a cluster.
+
+    A cluster with no recorded search says so explicitly: silence must never be
+    read as proof that no solution exists, which would make the problem look
+    more original than it is.
+    """
     if not cluster.solutions:
         return (
             "**Solutions.** Not searched yet — this is the next human step "

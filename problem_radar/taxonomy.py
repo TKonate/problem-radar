@@ -1,9 +1,10 @@
 """Taxonomy: domains, categories and source reliability.
 
 The taxonomy is intentionally small. Its job is to keep the report readable and
-to let the scoring reward diversity, not to be an ontology. Every keyword list is
-data, not logic, so it can be extended from ``config.json`` without touching the
-code (see :func:`problem_radar.config.load_config`).
+to let the scoring reward diversity, not to be an ontology. Every list below is
+plain module data: extending one means editing this file, while the scoring
+weights and thresholds are the parts a ``config/radar.json`` can override. Nothing
+here does matching or inference; :mod:`problem_radar.text` owns that.
 """
 
 from __future__ import annotations

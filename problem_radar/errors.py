@@ -1,7 +1,9 @@
 """Exception hierarchy.
 
 Every expected failure is one of these, so the CLI can print a readable message
-and an exit code instead of a traceback.
+and an exit code instead of a traceback. Anything else keeps propagating: an
+unexpected exception is a bug in this tool and must stay visible as a complete
+traceback, not be flattened into a one-line error.
 """
 
 from __future__ import annotations
@@ -30,7 +32,11 @@ class StorageError(RadarError):
 
 
 class ValidationError(RadarError):
-    """A human supplied value is invalid."""
+    """A human supplied value is invalid.
+
+    ``details`` holds one actionable hint per entry (allowed values, candidate
+    ids); the CLI prints them under the error line.
+    """
 
     def __init__(self, message: str, details: list[str] | None = None) -> None:
         super().__init__(message)

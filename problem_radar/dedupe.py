@@ -3,7 +3,8 @@
 The algorithm is a greedy union-find over pairwise text similarity. It is
 O(n²) by design: the MVP works on a few hundred signals per run, and an
 explainable pairwise comparison is worth more than a faster opaque one. The
-caller caps the input size (see ``pipeline.MAX_SIGNALS``).
+caller caps the input size (see ``ClusterOptions.max_signals``, fed from the
+configuration).
 """
 
 from __future__ import annotations
@@ -34,18 +35,20 @@ class ClusterOptions:
 
 
 class _UnionFind:
-    """Minimal union-find."""
+    """Disjoint sets over signal indexes, with path halving."""
 
     def __init__(self, size: int) -> None:
         self.parent = list(range(size))
 
     def find(self, item: int) -> int:
+        """Root of ``item``, compressing the path on the way up."""
         while self.parent[item] != item:
             self.parent[item] = self.parent[self.parent[item]]
             item = self.parent[item]
         return item
 
     def union(self, first: int, second: int) -> None:
+        """Merge the two sets, keeping the root of ``first``."""
         root_first, root_second = self.find(first), self.find(second)
         if root_first != root_second:
             self.parent[root_second] = root_first
@@ -157,6 +160,12 @@ def build_cluster(members: list[Signal], *, status: str = "clustered") -> Cluste
 
 def cluster_signals(signals: list[Signal], options: ClusterOptions | None = None) -> list[Cluster]:
     """Group ``signals`` into clusters.
+
+    Merging is transitive through union-find: a chain of pairwise matches puts
+    two titles in the same cluster even when they never matched each other
+    directly. That is deliberate, since a shared intermediate wording usually
+    means a shared problem, and the alternative (complete-linkage) would split
+    genuine duplicates.
 
     Args:
         signals: Signals to group, in any order.

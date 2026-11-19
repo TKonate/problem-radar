@@ -33,7 +33,10 @@ def fold(text: str) -> str:
 
 
 def clip(text: str, limit: int = 400) -> str:
-    """Truncate ``text`` on a word boundary, adding an ellipsis when cut."""
+    """Truncate ``text`` on a word boundary, adding an ellipsis when cut.
+
+    Whitespace is collapsed first, so the result is always a single line.
+    """
     text = " ".join(text.split())
     if len(text) <= limit:
         return text
@@ -45,7 +48,8 @@ def tokens(text: str, extra_stopwords: frozenset[str] | None = None) -> set[str]
     """Return the meaningful tokens of ``text``.
 
     Tokens shorter than three characters are dropped except a short allow-list
-    (``ai``, ``db``, ``ui``, ``os``) that carries meaning in this domain.
+    (``ai``, ``db``, ``ui``, ``os``, ``ci``) that carries meaning in this
+    domain, where dropping them would erase the subject of a title.
     """
     stopwords = STOPWORDS | (extra_stopwords or frozenset())
     found = set(_TOKEN.findall(fold(text)))
@@ -92,7 +96,11 @@ def similarity(first: str, second: str) -> float:
 
 
 def first_sentence(text: str, limit: int = 300) -> str:
-    """Return the first non-empty sentence of ``text``, clipped."""
+    """Return the first non-empty sentence of ``text``, clipped.
+
+    Sentences of twenty characters or less are skipped as noise; when none
+    qualifies, the whole text is clipped instead.
+    """
     for sentence in _SENTENCE_SPLIT.split(text or ""):
         sentence = sentence.strip()
         if len(sentence) > 20:
@@ -101,7 +109,11 @@ def first_sentence(text: str, limit: int = 300) -> str:
 
 
 def severity_hits(text: str) -> set[str]:
-    """Return the severity words present in ``text``."""
+    """Return the severity words present in ``text``.
+
+    Matching is plain substring, unlike :func:`has_keyword`, so a word also
+    fires inside a longer one (``leak`` matches ``bleak``).
+    """
     folded = fold(text)
     return {word for word in SEVERITY_WORDS if word in folded}
 
@@ -199,7 +211,7 @@ def is_problem_like(title: str) -> bool:
 
     Only the title is considered, deliberately. Search APIs match the body too,
     so a body-based filter lets "Papers - November 2026" through whenever the
-    text mentions "rate limit" — the problem statement would then be a title
+    text mentions "rate limit"; the problem statement would then be a title
     that says nothing. Precision matters more than recall: a radar full of
     launch announcements and changelogs is unusable.
     """

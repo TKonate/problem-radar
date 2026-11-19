@@ -2,7 +2,9 @@
 
 The configuration is a single JSON file, versioned with the repository so a run
 is reproducible. It contains no secret: the optional GitHub token is read from
-the environment by the collector, never stored here.
+the environment by the collector, never stored here. Loading validates the shape
+once and fails with a message saying how to create a new file; it never reads
+the environment and never migrates an older format.
 """
 
 from __future__ import annotations
@@ -150,7 +152,11 @@ class Config:
 
 
 def _parse_score_options(raw: dict[str, Any]) -> ScoreOptions:
-    """Read the optional ``scoring`` section, keeping the defaults for absent keys."""
+    """Read the optional ``scoring`` section, keeping the defaults for absent keys.
+
+    A weight or threshold name that the scorer does not use is accepted and
+    ignored, so a typo here produces no error and no effect.
+    """
     scoring = raw.get("scoring", {})
     if not isinstance(scoring, dict):
         raise ConfigError("scoring must be an object")
@@ -229,5 +235,5 @@ def write_default_config(directory: str | Path) -> Path:
 
 
 def validate_domains(candidates: list[str]) -> list[str]:
-    """Keep only known domains, used when a source supplies its own labels."""
+    """Return ``candidates`` without the names that are not in ``DOMAINS``."""
     return [candidate for candidate in candidates if candidate in DOMAINS]

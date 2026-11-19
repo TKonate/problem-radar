@@ -71,7 +71,7 @@ def collect(
         dry_run: Do not write anything, only report what would be added.
 
     Returns:
-        A :class:`CollectSummary` per source.
+        A :class:`CollectSummary` with one entry per source, failures included.
     """
     client = client or HttpClient()
     sources = [config.source(only)] if only else config.enabled_sources
@@ -145,7 +145,13 @@ def rebuild_clusters(
 
 
 def load_or_rebuild(config: Config) -> list[Cluster]:
-    """Load the stored clusters, rebuilding them when the file is missing."""
+    """Load the stored clusters and re-score them, rebuilding when absent.
+
+    The stored path re-scores with the current weights against the current
+    signals but does not re-cluster or save anything: a read command must not
+    rewrite ``clusters.json``. A full rebuild, which does save, is reserved for
+    the case where no cluster is stored yet.
+    """
     signals = load_signals(config.signals_path)
     stored = load_clusters(config.clusters_path)
     if stored:

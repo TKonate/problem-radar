@@ -233,7 +233,7 @@ class Cluster:
     """A group of signals describing the same problem.
 
     Attributes:
-        id: Stable identifier (first eight hex chars of the member hash).
+        id: Stable identifier (first ten hex chars of the member hash).
         title: Representative title, the shortest clear member title.
         statement: Problem statement (one sentence).
         signal_ids: Member signal ids, in collection order.
